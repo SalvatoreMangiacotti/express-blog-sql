@@ -36,10 +36,10 @@ const show = (req, res) => {
         const post = results[0];
 
         const sqlTags = `
-        SELECT DISTINCT tags.* 
+        SELECT tags.* 
         FROM tags
         JOIN post_tag ON tags.id = post_tag.tag_id
-        WHERE post_tag.tag_id = ?
+        WHERE post_tag.post_id = ?
         `
 
         connection.query(sqlTags, [id], (err, postsResults) => {
