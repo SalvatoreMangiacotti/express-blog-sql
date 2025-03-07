@@ -28,9 +28,9 @@ router.get('/', index);
 // router.patch('/:id', modify);
 
 
-// // Destroy
+// Destroy
 
-// router.delete('/:id', destroy);
+router.delete('/:id', destroy);
 
 
 module.exports = router;
