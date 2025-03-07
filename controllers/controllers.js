@@ -1,11 +1,22 @@
-// const postsList = require('../data/posts')
+const connection = require('../data/db')
 
+// Index
 
-// // Index
+const index = (req, res) => {
 
-// const index = (req, res) => {
+    const sql = 'SELECT * FROM posts';
 
-// }
+    connection.query(sql, (err, results) => {
+
+        if (err) return res.status(500).json({ error: 'Database query failed' });
+
+        res.json(results)
+
+        console.log(results)
+
+    })
+
+}
 
 
 // // Show
@@ -53,11 +64,11 @@
 // }
 
 
-// module.exports = {
-//     index,
-//     show,
-//     store,
-//     update,
-//     modify,
-//     destroy
-// }
+module.exports = {
+    index,
+    // show,
+    // store,
+    // update,
+    // modify,
+    // destroy
+}

@@ -8,29 +8,29 @@ const { index, show, store, update, modify, destroy } = require('../controllers/
 router.get('/', index);
 
 
-// Show
+// // Show
 
-router.get('/:id', show);
-
-
-// Store
-
-router.post('/', store);
+// router.get('/:id', show);
 
 
-// Update
+// // Store
 
-router.post('/:id', update);
-
-
-// Modify
-
-router.patch('/:id', modify);
+// router.post('/', store);
 
 
-// Destroy
+// // Update
 
-router.delete('/:id', destroy);
+// router.post('/:id', update);
+
+
+// // Modify
+
+// router.patch('/:id', modify);
+
+
+// // Destroy
+
+// router.delete('/:id', destroy);
 
 
 module.exports = router;
