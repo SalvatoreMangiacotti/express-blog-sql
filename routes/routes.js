@@ -8,9 +8,9 @@ const { index, show, store, update, modify, destroy } = require('../controllers/
 router.get('/', index);
 
 
-// // Show
+// Show
 
-// router.get('/:id', show);
+router.get('/:id', show);
 
 
 // // Store
